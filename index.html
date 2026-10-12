@@ -1,11 +1,320 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Insurance claims and legal engagement interactive portfolio demonstration by Wenting Wang."><title>ClaimBridge | Insurance Claims & Legal Technology Demo</title><link rel="stylesheet" href="styles.css"></head><body>
-<header class="top"><a class="brand" href="#home"><span class="brandmark">✦</span> ClaimBridge <small>by Wenting Wang</small></a><nav aria-label="Main navigation"><a href="#journey">Claims Journey</a><a href="#file">File a Claim</a><a href="#legal">Legal Engagement</a><a href="#status">Claim Status</a></nav><span class="tag">PORTFOLIO DEMO</span></header>
-<main id="home"><section class="hero"><div class="hero-inner"><p class="eyebrow">INSURANCE TECHNOLOGY · LEGAL OPERATIONS</p><h1>A clearer claim journey.<br><em>Connected legal workflows.</em></h1><p>Explore a modern insurance claim experience—from first notice of loss and damage inspection to repairs, payment, and governed legal case engagement.</p><div class="actions"><a class="btn primary" href="#file">Start demo claim →</a><a class="btn ghost" href="#legal">Explore legal workflow</a></div><div class="metrics"><div><b>8</b><span>Claim service types</span></div><div><b>4</b><span>Customer journey stages</span></div><div><b>6</b><span>Legal workflow phases</span></div></div></div><div class="hero-card"><div class="cardtop"><span class="dot"></span> Claim operations preview <span class="status-pill">Simulation</span></div><div class="progressline"><div class="done">1</div><div class="line"></div><div>2</div><div class="line"></div><div>3</div><div class="line"></div><div>4</div></div><div class="milestones"><span>File claim</span><span>Inspect</span><span>Repair</span><span>Payment</span></div><div class="mini"><span>LEGAL CASE INTELLIGENCE</span><strong>Evidence & counsel readiness</strong><p>Structured intake, legal hold signals, auditable decisions, and secure case collaboration.</p></div></div></section>
-<section class="section" id="journey"><div class="sectionhead"><p class="eyebrow">END-TO-END EXPERIENCE</p><h2>Four stages. One connected journey.</h2><p>See how claims, repair partners, payment operations, and legal teams can work through a coordinated case lifecycle.</p></div><div class="steps"><article class="step"><div class="stepnumber">01</div><h3>File your claim</h3><p>Choose a claim type, describe the incident, and provide safe-to-share supporting details.</p><a href="#file">Open intake ↗</a></article><article class="step"><div class="stepnumber">02</div><h3>Inspect damage</h3><p>Coordinate an inspection with a repair-network provider or independent adjuster.</p><a href="#inspection">View inspection ↗</a></article><article class="step"><div class="stepnumber">03</div><h3>Begin repairs</h3><p>Track estimates, approvals, repair milestones, and vendor coordination.</p><a href="#repairs">View repairs ↗</a></article><article class="step"><div class="stepnumber">04</div><h3>Receive payment</h3><p>Review payment status, settlement items, and customer notifications.</p><a href="#payment">View payment ↗</a></article></div></section>
-<section class="section intake" id="file"><div class="sectionhead"><p class="eyebrow">STAGE 01 · FIRST NOTICE OF LOSS</p><h2>File your claim</h2><p>Tell us what happened. This demonstration uses fictional information only; do not enter real policy numbers, personal details, or documents.</p></div><div class="grid2"><div class="panel"><h3>Claims service catalog</h3><p class="muted">Select the type of claim to tailor the intake experience.</p><div class="catalog" id="catalog" role="group" aria-label="Claim category"></div><form id="claimForm"><div class="formgrid"><label>Demo policy reference <small>(optional)</small><input name="policy" placeholder="DEMO-12345" maxlength="32" autocomplete="off"></label><label>Date of incident<input name="date" type="date" required></label><label>Approximate time<input name="time" type="time"></label><label>Incident location<input name="location" placeholder="City and state only" maxlength="100" required></label><label>Preferred fictional contact name<input name="name" placeholder="Alex Sample" maxlength="80" required></label><label>Notification preference<select name="notify"><option>Email updates (simulated)</option><option>Text updates (simulated)</option><option>Secure inbox only (simulated)</option></select></label></div><label>What happened?<textarea name="description" rows="4" maxlength="1200" placeholder="Describe what happened without entering real sensitive data" required></textarea></label><div id="vehicleFields" class="context"><strong>Auto / motorcycle checklist</strong><p>Collect photos of the vehicles, license plates, and accident scene only when it is safe. Note contact and insurance information for other drivers and witnesses and police report / officer details when applicable. Do not enter real identifiers in this demo.</p><div class="formgrid"><label>Other-party details (fictional)<input name="otherParty" placeholder="Driver / witness (demo only)"></label><label>Police report status<select name="police"><option>Not available</option><option>Filed (demo)</option><option>Not required</option></select></label></div></div><label class="check"><input type="checkbox" id="consent" required><span>I understand this is a portfolio demo. Data is processed locally in this browser and is not submitted to an insurer, and no messages are actually sent.</span></label><div class="form-actions"><button class="btn primary" type="submit">Create demo claim →</button><button class="btn light" type="reset">Clear form</button></div><p class="formnote" id="formMessage" role="status" aria-live="polite"></p></form></div><aside class="panel sidebar"><h3>Evidence readiness</h3><p>Use safe, privacy-conscious practices during any incident.</p><div class="checkitems"><div>✓ Incident date, time and general location</div><div>✓ Photos only if safe to take</div><div>✓ Other parties and witnesses (real portal only)</div><div>✓ Police report / officer names if applicable</div><div>✓ No originals or personal IDs uploaded here</div></div><div class="notice"><strong>Document verification demo</strong><p><label>Optional evidence labels (no uploads)<select id="evidence"><option>No supporting evidence selected</option><option>Vehicle / property photos available</option><option>Repair estimate available</option><option>Incident report available</option></select></label></p><small>This static website intentionally does not accept files.</small></div><h3>Legal engagement triggers</h3><div class="toggles"><label><input type="checkbox" id="injury"> Injury reported</label><label><input type="checkbox" id="dispute"> Liability or coverage dispute</label><label><input type="checkbox" id="litigation"> Attorney or litigation involvement</label></div><div id="riskPreview" class="risk">Standard claims pathway</div></aside></div></section>
-<section class="section" id="inspection"><div class="split"><div><p class="eyebrow">STAGE 02</p><h2>Inspect damage</h2><p>A claim team can coordinate an inspection with an approved repair-network provider, local contractor, or independent adjuster. Providers in the Allstate Good Hands® Repair Network may be available for eligible actual Allstate claims; this demo does not provide booking or network access.</p><div class="bullets"><p>✓ Document scope of damage and estimate</p><p>✓ Track assessment and additional evidence</p><p>✓ Escalate disputed causation or liability for review</p></div><button class="btn light action-btn" data-stage="inspection">Mark inspection complete (demo)</button></div><div class="feature"><div class="featureicon">⌕</div><h3>Inspection workspace</h3><div class="feature-row"><span>Damage assessment</span><b id="inspectionState">Pending</b></div><div class="feature-row"><span>Estimate validation</span><b>Illustrative</b></div><div class="feature-row"><span>Coverage review</span><b>Policy-dependent</b></div><p class="muted">Actual inspection assignments, estimates and coverage are not provided.</p></div></div></section>
-<section class="section alt" id="repairs"><div class="split"><div><p class="eyebrow">STAGE 03</p><h2>Begin repairs</h2><p>Claims professionals can collaborate with a customer-selected repair shop or contractor to evaluate covered damage and the associated estimate. Actual repair-network guarantees vary by program, provider and eligibility; no guarantee is offered by this demo.</p><div class="bullets"><p>✓ Repair vendor coordination</p><p>✓ Estimate and supplement tracking</p><p>✓ Legal / liability exception review</p></div><button class="btn light action-btn" data-stage="repairs">Mark repairs initiated (demo)</button></div><div class="feature"><div class="featureicon">⚙</div><h3>Repair coordination</h3><div class="feature-row"><span>Vendor assignment</span><b id="repairsState">Not started</b></div><div class="feature-row"><span>Scope approval</span><b>Simulated</b></div><div class="feature-row"><span>Updates</span><b>In-app only</b></div></div></div></section>
-<section class="section" id="payment"><div class="split"><div><p class="eyebrow">STAGE 04</p><h2>Receive payment</h2><p>For eligible covered losses, an insurer may pay the policyholder or an authorized repair provider, depending on the claim and policy terms. This demonstration never transfers funds.</p><div class="bullets"><p>✓ Document settlement recommendation</p><p>✓ Track payment and resolution status</p><p>✓ Coordinate legally sensitive exceptions</p></div><button class="btn light action-btn" data-stage="payment">Mark payment simulated (demo)</button></div><div class="feature"><div class="featureicon">$</div><h3>Settlement status</h3><div class="feature-row"><span>Payment</span><b id="paymentState">Not initiated</b></div><div class="feature-row"><span>Disbursement method</span><b>Demo only</b></div><div class="feature-row"><span>Audit trail</span><b>Browser session</b></div></div></div></section>
-<section class="section legal" id="legal"><div class="sectionhead"><p class="eyebrow">LEGAL TECHNOLOGY ENGAGEMENT</p><h2>From claim intake to defensible legal resolution.</h2><p>A connected legal-operations journey with policy-based escalations, evidence stewardship, workflow controls, and traceable actions.</p></div><div class="legal-grid"><div class="panel"><h3>Legal workflow orchestration</h3><ol class="legal-steps"><li><b>Trigger & triage</b><span>Injury, liability dispute, litigation or high-severity indicators route for specialist review.</span></li><li><b>Case creation</b><span>Associate claim reference, matter type, owner, and deadlines in a legal-matter system.</span></li><li><b>Evidence governance</b><span>Capture chain-of-custody metadata, retention rules, legal holds, and access permissions.</span></li><li><b>Counsel engagement</b><span>Coordinate internal/external counsel, secure communication, and budget approvals.</span></li><li><b>Negotiation & settlement</b><span>Document assessments, authority checks, and approved settlement instructions.</span></li><li><b>Closure & audit</b><span>Record disposition, legal spend, approvals, and retention schedule.</span></li></ol></div><div class="panel"><h3>Simulated legal case dashboard</h3><div class="kpi"><span>Legal review signal</span><strong id="legalRisk">Not evaluated</strong></div><div class="kpi"><span>Matter workflow</span><strong id="matterStatus">No claim started</strong></div><div class="kpi"><span>Evidence controls</span><strong>Review checklist</strong></div><div class="kpi"><span>Counsel assignment</span><strong>Human approval required</strong></div><div class="notice"><strong>Human-in-the-loop controls</strong><p>No AI system makes an actual coverage, liability, or litigation decision. Suggested flags in this demo are informational only.</p></div><button class="btn primary" id="reviewBtn" type="button">Simulate legal triage</button><p id="legalMessage" class="formnote" aria-live="polite"></p></div></div><div class="architecture"><div><strong>Claim Intake</strong><small>Structured FNOL</small></div><span>→</span><div><strong>Workflow Engine</strong><small>Rules + tasks</small></div><span>→</span><div><strong>Legal Matter System</strong><small>Evidence + counsel</small></div><span>→</span><div><strong>Audit / Reporting</strong><small>Governance + analytics</small></div></div></section>
-<section class="section alt" id="status"><div class="sectionhead"><p class="eyebrow">CUSTOMER COMMUNICATIONS</p><h2>Track your demo claim</h2><p>Customer-facing milestones and in-app messages. Nothing is sent by email or SMS.</p></div><div class="grid2"><div class="panel"><h3>Application status</h3><div class="claimref">Reference <strong id="claimRef">Not yet created</strong></div><div class="timeline" id="timeline"><div><b>1. Claim filed</b><small>Waiting for demo claim</small></div><div><b>2. Damage inspection</b><small>Pending</small></div><div><b>3. Repairs</b><small>Pending</small></div><div><b>4. Payment</b><small>Pending</small></div></div><button class="btn light" id="resetDemo" type="button">Reset entire demo</button></div><div class="panel"><h3>Secure inbox simulation</h3><div class="inbox" id="inbox"><p>No messages yet. Start a demo claim to see a status notification.</p></div><div class="notice"><small>This is not a secure messaging platform. The inbox is a local interface illustration only.</small></div></div></div></section>
-<section class="footercta"><p class="eyebrow">ENGINEERING PORTFOLIO</p><h2>Built to demonstrate scalable claims and legal technology thinking.</h2><p>Wenting Wang · Engineering management · Cloud-native architecture · AI-assisted workflows · Enterprise integration</p><a class="btn ghost" href="mailto:your-email@example.com">Contact (replace email) ↗</a></section></main><footer><span>© <span id="year"></span> Wenting Wang · ClaimBridge portfolio demonstration</span><span>Not affiliated with, endorsed by, or operated by Allstate. Allstate and Good Hands® are trademarks of their respective owners.</span></footer><script src="app.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description"
+        content="Insurance claims and legal engagement interactive portfolio demonstration by Wenting Wang.">
+    <title>ClaimBridge | Insurance Claims & Legal Technology Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="top"><a class="brand" href="#home"><span class="brandmark">✦</span> ClaimBridge <small>by Wenting
+                Wang</small></a>
+        <nav aria-label="Main navigation"><a href="#journey">Claims Journey</a><a href="#file">File a Claim</a><a
+                href="#legal">Legal Engagement</a><a href="#status">Claim Status</a></nav><span class="tag">PORTFOLIO
+            DEMO</span>
+    </header>
+    <main id="home">
+        <section class="hero">
+            <div class="hero-inner">
+                <p class="eyebrow">INSURANCE TECHNOLOGY · LEGAL OPERATIONS</p>
+                <h1>A clearer claim journey.<br><em>Connected legal workflows.</em></h1>
+                <p>Explore a modern insurance claim experience—from first notice of loss and damage inspection to
+                    repairs, payment, and governed legal case engagement.</p>
+                <div class="actions"><a class="btn primary" href="#file">Start demo claim →</a><a class="btn ghost"
+                        href="#legal">Explore legal workflow</a></div>
+                <div class="metrics">
+                    <div><b>8</b><span>Claim service types</span></div>
+                    <div><b>4</b><span>Customer journey stages</span></div>
+                    <div><b>6</b><span>Legal workflow phases</span></div>
+                </div>
+            </div>
+            <div class="hero-card">
+                <div class="cardtop"><span class="dot"></span> Claim operations preview <span
+                        class="status-pill">Simulation</span></div>
+                <div class="progressline">
+                    <div class="done">1</div>
+                    <div class="line"></div>
+                    <div>2</div>
+                    <div class="line"></div>
+                    <div>3</div>
+                    <div class="line"></div>
+                    <div>4</div>
+                </div>
+                <div class="milestones"><span>File
+                        claim</span><span>Inspect</span><span>Repair</span><span>Payment</span></div>
+                <div class="mini"><span>LEGAL CASE INTELLIGENCE</span><strong>Evidence & counsel readiness</strong>
+                    <p>Structured intake, legal hold signals, auditable decisions, and secure case collaboration.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="journey">
+            <div class="sectionhead">
+                <p class="eyebrow">END-TO-END EXPERIENCE</p>
+                <h2>Four stages. One connected journey.</h2>
+                <p>See how claims, repair partners, payment operations, and legal teams can work through a coordinated
+                    case lifecycle.</p>
+            </div>
+            <div class="steps">
+                <article class="step">
+                    <div class="stepnumber">01</div>
+                    <h3>File your claim</h3>
+                    <p>Choose a claim type, describe the incident, and provide safe-to-share supporting details.</p><a
+                        href="#file">Open intake ↗</a>
+                </article>
+                <article class="step">
+                    <div class="stepnumber">02</div>
+                    <h3>Inspect damage</h3>
+                    <p>Coordinate an inspection with a repair-network provider or independent adjuster.</p><a
+                        href="#inspection">View inspection ↗</a>
+                </article>
+                <article class="step">
+                    <div class="stepnumber">03</div>
+                    <h3>Begin repairs</h3>
+                    <p>Track estimates, approvals, repair milestones, and vendor coordination.</p><a
+                        href="#repairs">View repairs ↗</a>
+                </article>
+                <article class="step">
+                    <div class="stepnumber">04</div>
+                    <h3>Receive payment</h3>
+                    <p>Review payment status, settlement items, and customer notifications.</p><a href="#payment">View
+                        payment ↗</a>
+                </article>
+            </div>
+        </section>
+        <section class="section intake" id="file">
+            <div class="sectionhead">
+                <p class="eyebrow">STAGE 01 · FIRST NOTICE OF LOSS</p>
+                <h2>File your claim</h2>
+                <p>Tell us what happened. This demonstration uses fictional information only; do not enter real policy
+                    numbers, personal details, or documents.</p>
+            </div>
+            <div class="grid2">
+                <div class="panel">
+                    <h3>Claims service catalog</h3>
+                    <p class="muted">Select the type of claim to tailor the intake experience.</p>
+                    <div class="catalog" id="catalog" role="group" aria-label="Claim category"></div>
+                    <form id="claimForm">
+                        <div class="formgrid"><label>Demo policy reference <small>(optional)</small><input name="policy"
+                                    placeholder="DEMO-12345" maxlength="32" autocomplete="off"></label><label>Date of
+                                incident<input name="date" type="date" required></label><label>Approximate time<input
+                                    name="time" type="time"></label><label>Incident location<input name="location"
+                                    placeholder="City and state only" maxlength="100" required></label><label>Preferred
+                                fictional contact name<input name="name" placeholder="Alex Sample" maxlength="80"
+                                    required></label><label>Notification preference<select name="notify">
+                                    <option>Email updates (simulated)</option>
+                                    <option>Text updates (simulated)</option>
+                                    <option>Secure inbox only (simulated)</option>
+                                </select></label></div><label>What happened?<textarea name="description" rows="4"
+                                maxlength="1200"
+                                placeholder="Describe what happened without entering real sensitive data"
+                                required></textarea></label>
+                        <div id="vehicleFields" class="context"><strong>Auto / motorcycle checklist</strong>
+                            <p>Collect photos of the vehicles, license plates, and accident scene only when it is safe.
+                                Note contact and insurance information for other drivers and witnesses and police report
+                                / officer details when applicable. Do not enter real identifiers in this demo.</p>
+                            <div class="formgrid"><label>Other-party details (fictional)<input name="otherParty"
+                                        placeholder="Driver / witness (demo only)"></label><label>Police report
+                                    status<select name="police">
+                                        <option>Not available</option>
+                                        <option>Filed (demo)</option>
+                                        <option>Not required</option>
+                                    </select></label></div>
+                        </div><label class="check"><input type="checkbox" id="consent" required><span>I understand this
+                                is a portfolio demo. Data is processed locally in this browser and is not submitted to
+                                an insurer, and no messages are actually sent.</span></label>
+                        <div class="form-actions"><button class="btn primary" type="submit">Create demo claim
+                                →</button><button class="btn light" type="reset">Clear form</button></div>
+                        <p class="formnote" id="formMessage" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+                <aside class="panel sidebar">
+                    <h3>Evidence readiness</h3>
+                    <p>Use safe, privacy-conscious practices during any incident.</p>
+                    <div class="checkitems">
+                        <div>✓ Incident date, time and general location</div>
+                        <div>✓ Photos only if safe to take</div>
+                        <div>✓ Other parties and witnesses (real portal only)</div>
+                        <div>✓ Police report / officer names if applicable</div>
+                        <div>✓ No originals or personal IDs uploaded here</div>
+                    </div>
+                    <div class="notice"><strong>Document verification demo</strong>
+                        <p><label>Optional evidence labels (no uploads)<select id="evidence">
+                                    <option>No supporting evidence selected</option>
+                                    <option>Vehicle / property photos available</option>
+                                    <option>Repair estimate available</option>
+                                    <option>Incident report available</option>
+                                </select></label></p><small>This static website intentionally does not accept
+                            files.</small>
+                    </div>
+                    <h3>Legal engagement triggers</h3>
+                    <div class="toggles"><label><input type="checkbox" id="injury"> Injury reported</label><label><input
+                                type="checkbox" id="dispute"> Liability or coverage dispute</label><label><input
+                                type="checkbox" id="litigation"> Attorney or litigation involvement</label></div>
+                    <div id="riskPreview" class="risk">Standard claims pathway</div>
+                </aside>
+            </div>
+        </section>
+        <section class="section" id="inspection">
+            <div class="split">
+                <div>
+                    <p class="eyebrow">STAGE 02</p>
+                    <h2>Inspect damage</h2>
+                    <p>A claim team can coordinate an inspection with an approved repair-network provider, local
+                        contractor, or independent adjuster. Providers in the Allstate Good Hands® Repair Network may be
+                        available for eligible actual Allstate claims; this demo does not provide booking or network
+                        access.</p>
+                    <div class="bullets">
+                        <p>✓ Document scope of damage and estimate</p>
+                        <p>✓ Track assessment and additional evidence</p>
+                        <p>✓ Escalate disputed causation or liability for review</p>
+                    </div><button class="btn light action-btn" data-stage="inspection">Mark inspection complete
+                        (demo)</button>
+                </div>
+                <div class="feature">
+                    <div class="featureicon">⌕</div>
+                    <h3>Inspection workspace</h3>
+                    <div class="feature-row"><span>Damage assessment</span><b id="inspectionState">Pending</b></div>
+                    <div class="feature-row"><span>Estimate validation</span><b>Illustrative</b></div>
+                    <div class="feature-row"><span>Coverage review</span><b>Policy-dependent</b></div>
+                    <p class="muted">Actual inspection assignments, estimates and coverage are not provided.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section alt" id="repairs">
+            <div class="split">
+                <div>
+                    <p class="eyebrow">STAGE 03</p>
+                    <h2>Begin repairs</h2>
+                    <p>Claims professionals can collaborate with a customer-selected repair shop or contractor to
+                        evaluate covered damage and the associated estimate. Actual repair-network guarantees vary by
+                        program, provider and eligibility; no guarantee is offered by this demo.</p>
+                    <div class="bullets">
+                        <p>✓ Repair vendor coordination</p>
+                        <p>✓ Estimate and supplement tracking</p>
+                        <p>✓ Legal / liability exception review</p>
+                    </div><button class="btn light action-btn" data-stage="repairs">Mark repairs initiated
+                        (demo)</button>
+                </div>
+                <div class="feature">
+                    <div class="featureicon">⚙</div>
+                    <h3>Repair coordination</h3>
+                    <div class="feature-row"><span>Vendor assignment</span><b id="repairsState">Not started</b></div>
+                    <div class="feature-row"><span>Scope approval</span><b>Simulated</b></div>
+                    <div class="feature-row"><span>Updates</span><b>In-app only</b></div>
+                </div>
+            </div>
+        </section>
+        <section class="section" id="payment">
+            <div class="split">
+                <div>
+                    <p class="eyebrow">STAGE 04</p>
+                    <h2>Receive payment</h2>
+                    <p>For eligible covered losses, an insurer may pay the policyholder or an authorized repair
+                        provider, depending on the claim and policy terms. This demonstration never transfers funds.</p>
+                    <div class="bullets">
+                        <p>✓ Document settlement recommendation</p>
+                        <p>✓ Track payment and resolution status</p>
+                        <p>✓ Coordinate legally sensitive exceptions</p>
+                    </div><button class="btn light action-btn" data-stage="payment">Mark payment simulated
+                        (demo)</button>
+                </div>
+                <div class="feature">
+                    <div class="featureicon">$</div>
+                    <h3>Settlement status</h3>
+                    <div class="feature-row"><span>Payment</span><b id="paymentState">Not initiated</b></div>
+                    <div class="feature-row"><span>Disbursement method</span><b>Demo only</b></div>
+                    <div class="feature-row"><span>Audit trail</span><b>Browser session</b></div>
+                </div>
+            </div>
+        </section>
+        <section class="section legal" id="legal">
+            <div class="sectionhead">
+                <p class="eyebrow">LEGAL TECHNOLOGY ENGAGEMENT</p>
+                <h2>From claim intake to defensible legal resolution.</h2>
+                <p>A connected legal-operations journey with policy-based escalations, evidence stewardship, workflow
+                    controls, and traceable actions.</p>
+            </div>
+            <div class="legal-grid">
+                <div class="panel">
+                    <h3>Legal workflow orchestration</h3>
+                    <ol class="legal-steps">
+                        <li><b>Trigger & triage</b><span>Injury, liability dispute, litigation or high-severity
+                                indicators route for specialist review.</span></li>
+                        <li><b>Case creation</b><span>Associate claim reference, matter type, owner, and deadlines in a
+                                legal-matter system.</span></li>
+                        <li><b>Evidence governance</b><span>Capture chain-of-custody metadata, retention rules, legal
+                                holds, and access permissions.</span></li>
+                        <li><b>Counsel engagement</b><span>Coordinate internal/external counsel, secure communication,
+                                and budget approvals.</span></li>
+                        <li><b>Negotiation & settlement</b><span>Document assessments, authority checks, and approved
+                                settlement instructions.</span></li>
+                        <li><b>Closure & audit</b><span>Record disposition, legal spend, approvals, and retention
+                                schedule.</span></li>
+                    </ol>
+                </div>
+                <div class="panel">
+                    <h3>Simulated legal case dashboard</h3>
+                    <div class="kpi"><span>Legal review signal</span><strong id="legalRisk">Not evaluated</strong></div>
+                    <div class="kpi"><span>Matter workflow</span><strong id="matterStatus">No claim started</strong>
+                    </div>
+                    <div class="kpi"><span>Evidence controls</span><strong>Review checklist</strong></div>
+                    <div class="kpi"><span>Counsel assignment</span><strong>Human approval required</strong></div>
+                    <div class="notice"><strong>Human-in-the-loop controls</strong>
+                        <p>No AI system makes an actual coverage, liability, or litigation decision. Suggested flags in
+                            this demo are informational only.</p>
+                    </div><button class="btn primary" id="reviewBtn" type="button">Simulate legal triage</button>
+                    <p id="legalMessage" class="formnote" aria-live="polite"></p>
+                </div>
+            </div>
+            <div class="architecture">
+                <div><strong>Claim Intake</strong><small>Structured FNOL</small></div><span>→</span>
+                <div><strong>Workflow Engine</strong><small>Rules + tasks</small></div><span>→</span>
+                <div><strong>Legal Matter System</strong><small>Evidence + counsel</small></div><span>→</span>
+                <div><strong>Audit / Reporting</strong><small>Governance + analytics</small></div>
+            </div>
+        </section>
+        <section class="section alt" id="status">
+            <div class="sectionhead">
+                <p class="eyebrow">CUSTOMER COMMUNICATIONS</p>
+                <h2>Track your demo claim</h2>
+                <p>Customer-facing milestones and in-app messages. Nothing is sent by email or SMS.</p>
+            </div>
+            <div class="grid2">
+                <div class="panel">
+                    <h3>Application status</h3>
+                    <div class="claimref">Reference <strong id="claimRef">Not yet created</strong></div>
+                    <div class="timeline" id="timeline">
+                        <div><b>1. Claim filed</b><small>Waiting for demo claim</small></div>
+                        <div><b>2. Damage inspection</b><small>Pending</small></div>
+                        <div><b>3. Repairs</b><small>Pending</small></div>
+                        <div><b>4. Payment</b><small>Pending</small></div>
+                    </div><button class="btn light" id="resetDemo" type="button">Reset entire demo</button>
+                </div>
+                <div class="panel">
+                    <h3>Secure inbox simulation</h3>
+                    <div class="inbox" id="inbox">
+                        <p>No messages yet. Start a demo claim to see a status notification.</p>
+                    </div>
+                    <div class="notice"><small>This is not a secure messaging platform. The inbox is a local interface
+                            illustration only.</small></div>
+                </div>
+            </div>
+        </section>
+        <section class="footercta">
+            <p class="eyebrow">ENGINEERING PORTFOLIO</p>
+            <h2>Built to demonstrate scalable claims and legal technology thinking.</h2>
+            <p>Wenting Wang · Engineering management · Cloud-native architecture · AI-assisted workflows · Enterprise
+                integration</p><a class="btn ghost" href="mailto:your-email@example.com">Contact (replace email) ↗</a>
+        </section>
+    </main>
+    <footer><span>© <span id="year"></span> Wenting Wang · ClaimBridge portfolio demonstration</span><span>Not
+            affiliated with, endorsed by, or operated by Allstate. Allstate and Good Hands® are trademarks of their
+            respective owners.</span></footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
